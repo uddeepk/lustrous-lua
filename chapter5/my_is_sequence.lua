@@ -14,12 +14,12 @@ function my_is_sequence(t)
       -- is key numeric?
       if isvalidkey(key) then
 	 -- is value nil?
-	 if type(value) ~= "nil" then
+	 -- if type(value) ~= "nil" then -- redundant, lua won't go over it
 	    num_of_values = num_of_values + 1
 	    if key > max_key then
 	       max_key = key
 	    end
-	 end
+	 --end
       end
    end
    return num_of_values == max_key
